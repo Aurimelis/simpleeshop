@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <title>E-Shop assignment</title>
+    <link href="/images/favicon.ico" rel="shortcut icon">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="/css/custom.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="main-menu">
+                <ul class="nav navbar-nav" id="main-menu-left">
+                    <li>
+                        <h1>Nortal PHP assignment</h1>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" id="user-actions">
+                    <li><a href="http://www.nortal.lt/"><img src="/images/home.png"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container main-content">
+        @RenderBody()
+    </div>
+
+    <footer class="bs-docs-footer">
+        <div class="container">
+            <p>
+                Created by Nortal. Editing of this application is only allowed with the purpose of applying to Nortal.<br />
+                We are not responsible for the content dynamically loaded or generated on this site and do not endorse the views expressed within that content.<br />
+                <a href="#">Back to top</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/js/script.js"></script>
+</body>
+</html>

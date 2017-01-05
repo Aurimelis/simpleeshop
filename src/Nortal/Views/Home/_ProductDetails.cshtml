@@ -1,0 +1,13 @@
+﻿@model ProductViewModel
+
+@if (Model != null)
+{
+    <h3>@Model.Name</h3>
+    <img src="@Url.Content(Model.ImageLarge)" />
+    <br /><br />
+    <p>Manufacturer: @Model.Manufacturer</p>
+    <p>OS: @Model.OperatingSystem</p>
+    <p>Storage: @Model.Storage</p>
+    <p>Camera: @Model.CameraMpix</p>
+    <span class="close">×</span>
+}

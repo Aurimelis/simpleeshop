@@ -1,0 +1,42 @@
+﻿<div class="row visible">
+    <div class="filters">
+        <form>
+            @* filtrus galima butu loadinti dinamiskai, priklausomai nuo to kokie duombazeje yra duomenys. Sitoje DB schemoje galima butu imti distinctus is lentos ProductSpecs ir vaizduoti cia. *@
+            <div class="filter-criteria">
+                <span>Manufacturer</span>
+                <label><input type="checkbox" name="manufacturers" value="apple">Apple</label>
+                <label><input type="checkbox" name="manufacturers" value="samsung">Samsung</label>
+                <label><input type="checkbox" name="manufacturers" value="htc">HTC</label>
+                <label><input type="checkbox" name="manufacturers" value="nokia">Nokia</label>
+                <label><input type="checkbox" name="manufacturers" value="zte">ZTE</label>
+                <label><input type="checkbox" name="manufacturers" value="sony">Sony</label>
+            </div>
+
+            <div class="filter-criteria">
+                <span>Storage</span>
+                <label><input type="checkbox" value="16" name="storages">16 GB</label>
+                <label><input type="checkbox" value="32" name="storages">32 GB</label>
+            </div>
+
+            <div class="filter-criteria">
+                <span>OS</span>
+                <label><input type="checkbox" value="android" name="os">Android</label>
+                <label><input type="checkbox" value="ios" name="os">iOS</label>
+                <label><input type="checkbox" value="windows" name="os">Windows</label>
+            </div>
+
+            <button id="clear_filters" class="btn btn-primary">Clear filters</button>
+        </form>
+    </div>
+
+    @* divas ajaxui uzloadinti produktus *@
+    <div id="product-catalog" class="all-products page visible"></div>
+</div>
+
+@*Cia butu galima iteruoti per produktus ir visus isvesti divus skirtingais id kaip kad buvo jusu pavyzdy, bet jei turesim 1000 produktu tai labai jau nekaip atrodytu html :) todel sita bloka loadinu per atskira call, kur gaunu specsus produkto*@
+<div id="product-details-container">
+    <div class="single-product page">
+        <div class="overlay"></div>
+        <div class="preview-large"></div>
+    </div>
+</div>
