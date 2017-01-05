@@ -1,18 +1,26 @@
 ﻿@model List<ProductViewModel>
 
-<ul class="products-list">
-    @foreach (var m in Model)
-    {
-        <li id="products-template" data-index="@m.Id">
-            <a href="javascript:void(0)" class="product-details-link">
-                <div class="product-photo"><img src="@Url.Content(m.ImageSmall)" height="130" alt="@m.Name" /></div>
-                <h2>@m.Name</h2>
-                <div class="product-description">
-                    <button class="btn btn-primary">Buy</button>
-                    <p class="product-price">@m.Price €</p>
-                </div>
-                <div class="highlight" data-id="@m.Id"></div>
-            </a>
-        </li>
-    }
-</ul>
+@if (Model.Any())
+{
+    <ul class="products-list">
+        @foreach (var m in Model)
+        {
+            <li id="products-template" data-index="@m.Id">
+                <a href="javascript:void(0)" class="product-details-link">
+                    <div class="product-photo"><img src="@Url.Content(m.ImageSmall)" height="130" alt="@m.Name"/>
+                    </div>
+                    <h2>@m.Name</h2>
+                    <div class="product-description">
+                        <button class="btn btn-primary">Buy</button>
+                        <p class="product-price">@m.Price €</p>
+                    </div>
+                    <div class="highlight" data-id="@m.Id"></div>
+                </a>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <h3 class="no-products">Sorry, no products found.</h3>
+}
